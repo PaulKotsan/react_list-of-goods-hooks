@@ -70,8 +70,8 @@ export const App: React.FC = () => {
           type="button"
           // className="button is-success is-light"
           className={classNames('button', {
+            'is-success': sortType === SortType.SortByLength,
             'is-light': sortType !== SortType.SortByLength,
-            'is-warning': sortType === SortType.SortByLength,
           })}
           onClick={() => setSortType(SortType.SortByLength)}
         >
